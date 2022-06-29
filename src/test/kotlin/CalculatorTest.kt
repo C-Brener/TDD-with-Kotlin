@@ -25,5 +25,15 @@ class CalculatorTest {
         assertEquals(1, result)
     }
 
+    @Test
+    fun `Ensure splitString() returns StringArray WHEN called`() {
+        val calculator = Calculator()
+        val expression = "2 / 2"
+        val mapped = calculator.splitString(expression)
+        val expected = expression.split(" ")
+
+        assert(mapped == expected)
+    }
+
 
 }
