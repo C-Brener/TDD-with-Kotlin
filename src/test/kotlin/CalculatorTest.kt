@@ -1,4 +1,3 @@
-
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
@@ -14,6 +13,16 @@ class CalculatorTest {
 
         assertEquals(4, result)
 
+    }
+
+    @Test
+    fun `Should divide 2 by 2`() {
+
+        val calculator = Calculator()
+
+        val result = calculator.parse("2 / 2")
+
+        assertEquals(1, result)
     }
 
 
