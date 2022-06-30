@@ -1,13 +1,16 @@
 class Calculator {
 
     fun parse(expression: String): Int {
-        val valuesSplitted = splitString(expression)
-        val result = when (valuesSplitted[1]) {
+        val (a, operator, b) = splitString(expression)
+        val result = when (operator) {
             "/" -> {
-                valuesSplitted[0].toInt() / valuesSplitted[2].toInt()
+                a.toInt() / b.toInt()
+            }
+            "+" -> {
+                a.toInt() + b.toInt()
             }
             else -> {
-                valuesSplitted[0].toInt() * valuesSplitted[2].toInt()
+                a.toInt() * b.toInt()
 
             }
         }
